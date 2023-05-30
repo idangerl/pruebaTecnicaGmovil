@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+  <!-- Nuevo Modal -->
+  <div class="modal-wrapper-nuevo">
+    <div class="modal-nuevo">
+      <div class="modal-header-nuevo">
+        <h2>¡Promo de la semana!</h2>
+        <button class="close-modal-nuevo">X</button>
+      </div>
+      <div class="modal-content-nuevo">
+        <div class="miDiv">
+          <img src="/assets/hawaiana.png">
+        </div><br>
+        <h2>Hamburguesa Hawaiana</h2><br>
+        <p>Descripción: Hamburguesa con carne de res, tocino, queso cheddar, lechuga, tomate y salsa BBQ.</p><br>
+        <h2>Precio: $55 MXN</h2>
+      </div>
+      <div class="modal-footer-nuevo">
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="sticky-notice" id="div-nav">
+      <span class="dot"></span>
+      <span class="message" id="estado">Abierto</span>
+      <div class="trigger" id="icon-nav"><span></span></div>
+      <div class="logo_header"></div>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="content">
+      <a class="logo">
+        <img src="/assets/logo.png" />
+      </a>
+      <ul class="menu">
+        <li><a href="#ensaladasSection">Ensaladas</a></li>
+        <li><a href="#burgersSection">Burgers</a></li>
+        <li><a href="#snacksSection">Snacks</a></li>
+        <li><a href="#pastasSection">Sandwiches y Pastas</a></li>
+        <li><a href="#bebidasSection">Bebidas</a></li>
+      </ul>
+        <div class="unete-bg">Unete a Tickety </div>
+        <div class="unete">Promociones Exclusivas</div>
+        <img class="posterSansa" src="/assets/postersansa.webp" alt="Descripción de la imagen">
+    </div>
+  </div>
+  <article class="support">
+    <video autoplay loop muted playsinline class="bg-video" id="bg-video">
+      <source src="/assets/videocomida.mp4" type="video/mp4">
+    </video>
+    <div class="callout">
+      <h1>100% Natural </h1>
+      <br>
+      <div class="subtituloHead">Carta Digital Menú</div>
+      <br><br>
+      <a href="#ensaladasSection" id="scrollButton" class="botonhead" role="button">
+        <span class="elementor-button-content-wrapper"></span>
+        <span class="elementor-button-text"> Ver Menú</span> </a>
+      <br><br><br>
+    </div>
+  </article>
+  <header class="productos">
+    <section id="ensaladasSection" class="section">
+      <img src="/assets/ensaladasTitle.png" alt="Descripción de la imagen">
+    </section>
+    <div class="container">
+        <div class="grid">
+          <article class="card">
+            <img class="card__image" src="/assets/salmon.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada de Salmon</h2>
+                <p>Descripcion de la comida, con ingredientes</p>
+                <input class="input_Cards" type="number" name="qty" id="number01" value="" placeholder="1" min="1" />
+                <select id="tamanio1">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$140.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[0], document.getElementById('tamanio1').value, document.getElementById('number01').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/arrachera.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada de Arrachera</h2>
+                <p>Deliciosa arrachera de res con ensalada Rumana</p>
+                <input class="input_Cards" type="number" name="qty" id="number02" value="" placeholder="1" min="1" />
+                <select id="tamanio2">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$100.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[1], document.getElementById('tamanio2').value, document.getElementById('number02').value);">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/cuatroquesos.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada cuatro quesos</h2>
+                <p>Deliciosa mezcla de quesos en una ensalada</p>
+                <input class="input_Cards" type="number" name="qty" id="number03" value="" placeholder="1" min="1" />
+                <select id="tamanio3">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$95.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[2], document.getElementById('tamanio3').value, document.getElementById('number03').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/frutosrojos.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada de Frutos Rojos</h2>
+                <p>Refrescante, dulce, colorida, saludable, crujiente, veraniega, deliciosa.</p>
+                <input class="input_Cards" type= "number" name="qty" id="number04" value="" placeholder="1" min="1" />
+                <select id="tamanio4">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$90.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[3], document.getElementById('tamanio4').value, document.getElementById('number04').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/frutosrojosconpanela.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada Frutos Rojos Con Queso Panela</h2>
+                <p>Ensalada de frutos rojos con pechuga asada o empanizada con queso panela</p>
+                <input class="input_Cards" type="number" name="qty" id="number05" value="" placeholder="1" min="1" />
+                <select id="tamanio5">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$95.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[4], document.getElementById('tamanio5').value, document.getElementById('number05').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/rollopechuga.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Rollo de Pechugas Rellenas</h2>
+                <br><br>
+                <p>Delicioso rollito de pechuga relleno de jamón y queso parmesano, elije asado o empanizado.</p>
+                <input class="input_Cards" type="number" name="qty" id="number06" value="" placeholder="1" min="1" />
+                <select id="tamanio6">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$100.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[5], document.getElementById('tamanio6').value,document.getElementById('number06').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/ensaladademango.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada de Mango</h2>
+                <br>
+                <p>Fruta fresca de temporada picada y mezclada con verduras selectas.</p>
+                <br>
+                <input class="input_Cards" type="number" name="qty" id="number07" value="" placeholder="1" min="1" />
+                <select id="tamanio7">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$95.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[6], document.getElementById('tamanio7').value,document.getElementById('number07').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/ensaladaitaliana.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada Italiana</h2>
+                <br>
+                <p>Frescas lechugas combinadas, con espinaca, pasta tornillo ademas de queso panela y pimiento.</p>
+                <input class="input_Cards" type="number" name="qty" id="number08" value="" placeholder="1" min="1" />
+                <select id="tamanio8">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$100.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[7], document.getElementById('tamanio8').value,document.getElementById('number08').value)">+</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="/assets/ladelacasa.png" />
+            <div class="card__data">
+              <div class="card__info">
+                <h2>Ensalada de la Casa</h2>
+                <p>fresca ensalada con la combinación precisa de sabores salados y dulces que dan en especia sabor a
+                  esta ensalada</p>
+                <input class="input_Cards" type="number" name="qty" id="number09" value="" placeholder="1" min="1" />
+                <select id="tamanio9">
+                  <option value="normal">Normal</option>
+                  <option value="chico">Chico</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+              <h3 class="card__price">$120.00</h3>
+              <button class="card__add"
+                onclick="agregarProducto(productos[8], document.getElementById('tamanio9').value,document.getElementById('number09').value)">+</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    <section id="burgersSection" class="section">
+      <img src="/assets/hamburguesasTitle.png">
+    </section>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <img class="card__image" src="/assets/americana.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Hamburguesa Americana</h2>
+              <p>carne 100% de res mas ingredientes de primera calidad, con su PORCIÓN de tocino y opcional cebollas
+                caramelizadas.</p>
+              <input class="input_Cards" type="number" name="qty" id="number10" value="" placeholder="1" min="1" />
+              <select id="tamanio10">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$85.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[9], document.getElementById('tamanio10').value, document.getElementById('number10').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/ranchera.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Hamburguesa Ranchera</h2>
+              <p>rica hamburguesa preparada con carne 100% de res, salchicha y sin olvidar su queso manchego,y cebollas
+                caramelizadas.</p>
+                <input class="input_Cards" type="number" name="qty" id="number11" value="" placeholder="1" min="1" />
+                <select id="tamanio11">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$85.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[10], document.getElementById('tamanio11').value, document.getElementById('number11').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/hawaiana.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Hamburguesa Hawaiana</h2>
+              <p>elaborada con la receta tradicional con su piña y queso manchego.</p>
+              <input class="input_Cards" type="number" name="qty" id="number12" value="" placeholder="1" min="1" />
+              <select id="tamanio12">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$80.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[11], document.getElementById('tamanio12').value, document.getElementById('number12').value)">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <section id="snacksSection" class="section">
+      <img src="/assets/snacksTitle.png">
+    </section>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <img class="card__image" src="/assets/costillasbbq.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <br>
+              <h2>Costillas BBQ</h2><br>
+              <p>costilla de cerdo preparada a la BBQ o tamarindo chipotle, en su cama de lechuga.</p>
+              <input class="input_Cards" type="number" name="qty" id="number13" value="" placeholder="1" min="1" />
+              <select id="tamanio13">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$90.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[12], document.getElementById('tamanio13').value, document.getElementById('number13').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/boneless.png" />
+          <div class="card__data">
+            <div class="card__info"><br>
+              <h2>Boneless de Pollo</h2>
+              <p>Pulpa de pechuga de pollo preparada por la casa, acompañada de bastones de verdurA</p>
+              <input class="input_Cards" type="number" name="qty" id="number14" value="" placeholder="1" min="1" />
+              <select id="tamanio14">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$85.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[13], document.getElementById('tamanio14').value, document.getElementById('number14').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/hotdog.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>HOTDOGS</h2>
+              <p>Los especiales de la casa, dos piezas por orden, acompañados de tocino, pico de gallo y su toque de
+                aguacate</p>
+                <input class="input_Cards" type="number" name="qty" id="number15" value="" placeholder="1" min="1" />
+                <select id="tamanio15">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$65.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[14], document.getElementById('tamanio15').value, document.getElementById('number15').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/papas.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Papas a la Francesa</h2>
+              <p>Orden individual de ricas papas doraditas, acompañadas de su queso suave y el toque de la casa</p>
+              <input class="input_Cards" type="number" name="qty" id="number16" value="" placeholder="1" min="1" />
+              <select id="tamanio16">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$45.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[15], document.getElementById('tamanio16').value, document.getElementById('number16').value)">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <section id="pastasSection" class="section">
+      <img src="/assets/titlesandwcihes.png">
+    </section>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <img class="card__image" src="/assets/club_sandwich.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Club Sandwich de Jamón</h2>
+              <p>Tres rebanadas de pan integral, mas queso panela, queso amarillo rico jamón de pierna, lechuga y
+                jitomate.</p>
+                <input class="input_Cards" type="number" name="qty" id="number17" value="" placeholder="1" min="1" />
+                <select id="tamanio17">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$80.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[16], document.getElementById('tamanio17').value, document.getElementById('number17').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/clubsandwichpollo.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Club Sandwich de Pollo </h2><br>
+              <p>tres rebanadas de pan integral, pechuga asada, queso panela, amarillo, lechuga y jitomate</p>
+              <input class="input_Cards" type="number" name="qty" id="number18" value="" placeholder="1" min="1" />
+              <select id="tamanio18">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$85.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[17], document.getElementById('tamanio18').value, document.getElementById('number18').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/spaggueti alfredo.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <br>
+              <h2>Spaghetti Alfredo</h2><br>
+              <p>Rica pasta cocinada con su toque de queso parmesano y crema.</p>
+              <input class="input_Cards" type="number" name="qty" id="number19" value="" placeholder="1" min="1" />
+              <select id="tamanio19">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$75.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[18], document.getElementById('tamanio19').value, document.getElementById('number19').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/spaguettibolongueza.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Spaguetti a la boloñesa</h2><br>
+              <p>Rica pasta preparada con su toque de queso parmesano y crema mas la rica boloñesa receta de la casa.
+              </p>
+              <input class="input_Cards" type="number" name="qty" id="number20" value="" placeholder="1" min="1" />
+              <select id="tamanio20">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$95.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[19], document.getElementById('tamanio20').value, document.getElementById('number20').value)">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <section id="bebidasSection" class="section">
+      <img src="/assets/titleBebidas.png">
+    </section>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <img class="card__image" src="/assets/sangria.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Sangria y Tehuacán Preparados</h2>
+              <p>Elaboradas en vaso de 16oz con su toque de limón y sal</p>
+              <br>
+              <input class="input_Cards" type="number" name="qty" id="number21" value="" placeholder="1" min="1" />
+              <select id="tamanio21">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$35.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[20], document.getElementById('tamanio21').value, document.getElementById('number21').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/soda italiana.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <h2>Soda Italiana (con Perlas) </h2><br>
+              <p>fresca bebida preparada con perlas explosivas en vaso de 16oz</p>
+              <input class="input_Cards" type="number" name="qty" id="number22" value="" placeholder="1" min="1" />
+              <select id="tamanio22">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$50.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[21], document.getElementById('tamanio22').value, document.getElementById('number22').value)">+</button>
+          </div>
+        </article>
+        <article class="card">
+          <img class="card__image" src="/assets/malteada.png" />
+          <div class="card__data">
+            <div class="card__info">
+              <br>
+              <h2>Malteada</h2><br>
+              <p>Sabores: fresa, vainilla, chocolate, porfavor especificar en comentarios sabor </p>
+              <input class="input_Cards" type="number" name="qty" id="number23" value="" placeholder="1" min="1" />
+              <select id="tamanio23">
+                <option value="normal">Normal</option>
+                <option value="chico">Chico</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <h3 class="card__price">$50.00</h3>
+            <button class="card__add"
+              onclick="agregarProducto(productos[22], document.getElementById('tamanio23').value, document.getElementById('number23').value)">+</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </header>
+  <section class="modal" id="carrito-modal">
+    <button id="modalCloseButtongreen" class="cerrar" onclick="closeModal()"> x</button>
+    <div class="carritoimg"><a><img src="/assets/carritotitle.png"></a></div>
+    <article class="container_modalchild">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody class="tablasContenedor" id="carrito">
+          <!-- Aquí se mostrarán los productos seleccionados -->
+        </tbody>
+      </table>
+    </article>
+    <p><strong>Total:</strong> <span id="total"><strong>$0.00</strong></span></p>
+    <article class="containerDatos">
+      <p>Notas del pedido (Opcional)</p>
+      <div class="comentario" id="comentario"><input type="text" name="comentario" class="comentario"
+          placeholder="Por ejemplo, la Salsa por aparte"></div>
+      
+      <p>Dirección Completa</p>
+      <div id="direccion"><input type="text" class="direccion" name="direccion" placeholder="Dirección completa"></div>
+      
+      <p>Email</p>
+      <div id="email"><input type="text" class="direccion" name="email" placeholder="Escribe un correo electronico">
+      </div>
+
+    </article>
+    <article class="contenedorWhatsModal">
+      <button id="buttonmodalabrir" class="botonSiguienteInternoModal" onclick="enviar()"> Siguiente</button>
+      <!--AQUI EMPIEZA TERCER MODAL ENCIMADO FINAL -->
+      <div id="miModalInterno" class="modalInterno">
+        <div id="cerrar-modal">
+          <div class="flecha">
+            <span class="arrow"></span>
+          </div>
+        </div>
+        <div id="tipodepedido" class="modal-contenido">
+          <div>
+            <h2>Tipo de entrega</h2>
+          <input type="radio" id="enviomodalInterno" name="tipo-entrega" value="envio-a-domicilio">
+          <label for="envio">Envío a domicilio</label><br>
+          <input type="radio" id="recoger" name="tipo-entrega" value="pasar-a-recoger">
+          <label for="recoger">Pasar a recoger</label><br>
+          <input type="radio" id="comer" name="tipo-entrega" value="comer-en-restaurante">
+          <label for="comer-en-restaurante">Estoy en el Restaurante</label><br>
+          <input name="numeroMesa" class="numeroMesa" id="numeroMesa" style="font-size: 19px;"
+            placeholder="Número de mesa"></input>
+          </div>
+        </div>
+        <div class="propinapadreflex">
+          <div class="propina">
+            <h2>Propina</h2>
+            <input type="radio" name="propina" id="propinaCero" class="propina-item" value="0">
+            <label for="propinaCero">$0</label>
+            <input type="radio" name="propina" id="propinaDiez" class="propina-item" value="10">
+            <label for="propinaDiez">$10</label>
+            <input type="radio" name="propina" id="propinaVeinte" class="propina-item" value="20 ¡Eres asombroso/a!"
+              checked>
+            <label for="propinaVeinte">$20</label>
+            
+            <input type="radio" name="propina" id="propinaTreinta" class="propina-item" value="30">
+            <label for="propinaTreinta">$30</label>
+            <input type="radio" name="propina" id="propinaCuarenta" class="propina-item" value="40">
+            <label for="propinaCuarenta">$40</label>
+            <input type="radio" name="propina" id="propinaCincuenta" class="propina-item" value="50">
+            <label for="propinaCincuenta">$50</label>
+            <input type="text" name="propina" id="propinaRandom" placeholder="Otro">
+          </div>
+          <div class="modal-contenido-2">
+            <div>
+              <h2>Método de Pago</h2>
+            <input type="radio" id="efectivo" name="tipo-pago" value="efectivo">
+            <label for="efectivo">Efectivo</label><br>
+            <div id="pago-efectivo">
+              <input name="concuanto" id="concuanto" type="text"
+              style="font-size: 22px;
+              font-size: 22px;
+              margin-left: -8%;
+              width: 100%;"
+              placeholder="¿Con cuánto pagas?">
+            </div>
+            <input type="radio" id="transferencia" name="tipo-pago" value="transferencia">
+            <label for="transferencia">Transferencia</label><br>
+            <div id="datos-transferencia">
+              <p>BBVA Bancomer<br> 4152 3134 6789 6789<br> CLABE <br> 0 5651 676 898273 83739<br>
+              <div style="color:red; font-size:18px;">NO OLVIDES ENVIARNOS FOTO DE TU COMPROBANTE</div>
+              </p>
+            </div>
+            <input type="radio" id="pago-en-caja" name="tipo-pago" value="pago-en-caja">
+            <label for="pago-en-caja">Pago en caja</label>
+            </div>
+          </div>
+        </div>
+        <article class="totales">
+          <div class="totalesflex">
+            <div>
+              <h2 >Subtotal:$ <span id="total3"></span></h2>
+            </div>
+            <div>
+              <h2 >Propina:$ <span id="propina">20</span>
+                <div id="mensajepropina"></div>
+              </h2>
+            </div>
+            <div class="totalfinalcomanda">
+              <h2 style="margin-left: 20%;"></h2>Total: $<span id="totalfinalcomanda"></span></h2>
+            </div>
+        </article>
+    </article>
+    <div class="enviarwhatsbotonflotante">
+      <button id="whatsboton" class="whatsboton" onclick="enviarWhatsApp()"> Enviar por Whatsapp</button>
+    </div>
+  </section>
+  <div class="stickyCarrito" id="carrito-btn">
+    <div class="stickyCarritoFlex">
+      <div class="img_Arriba"><a><img src="/assets/arriba.png"></a></div>
+      <div class="verCarrito"> Tu pedido </div>
+      <div class="totalsticky">
+        <p>Total: <span id="total2"><b>$0.00</b></span></p>
+      </div>
+      <button class="botonContinuar">Continuar</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  </div>
+  </header>
+  <script src="confetti.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
